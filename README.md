@@ -17,6 +17,9 @@ $ npm run docs
 #->docs/index.htmlとしてAPIドキュメントが作成される
 ```
 
+#### 展開先(GitHub Page)
+https://tetsuya-zama.github.io/kyodo.co-api-blueprint/
+
 ### APIドキュメントをプレビューする
 
 ```bash
