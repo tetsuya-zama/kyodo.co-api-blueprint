@@ -9,7 +9,6 @@
         + userid: correct_userid (string) - ユーザーID
         + password: correct_password (string) - パスワード
 
-
 + Response 200 (application/json)
     + Attributes
         + token: valid_access_token (string) - アクセストークン
