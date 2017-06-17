@@ -13,8 +13,8 @@
 + Response 200 (application/json)
     + Body
         [
-            {name: "groupname1", admin: { "userid1", "userid2" }},
-            {name: "groupname2", admin: { "userid3", }}
+            {id: "g0001", name: "groupname1", admin: { "userid1", "userid2" }},
+            {id: "g0002", name: "groupname2", admin: { "userid3", }}
         ]
 
 + Response 401 (application/json)
@@ -25,21 +25,18 @@
     + Attributes
         + message: no group (string) - グループがない
 
-
-## 個別グループエンドポイント [/group/{groupname}]
-
-+ Parameters
-    + groupname: 総務部(string) - 操作したいグループ名
-
 ### 新規グループ作成 [POST]
 新規グループ作成の場合は自動的に登録者がAdminとなる。
 + Request (application/json)
     + Headers
         Authorization : Bearer valid_access_token
+    + Attributes
+        + groupname: New group name (string, optional) - グループ名
 
 + Response 200 (application/json)
     + Attributes
         + message: ok (string) - グループ作成完了
+        + groupId: g0001 (string) - 発行されたグループID
 
 + Response 400 (application/json)
     + Attributes
@@ -48,6 +45,12 @@
 + Response 401 (application/json)
     + Attributes
         + message: invalid token (string) - トークンの認証に失敗
+
+## 個別グループエンドポイント [/group/{groupid}]
+
++ Parameters
+    + groupid: g0001 (string) - 操作したいグループID
+
 
 
 ### グループ変更 [PUT]
@@ -74,9 +77,6 @@
         + message: invalid token (string) - トークンの認証に失敗
 
 
-
-
-
 ### グループ削除 [DELETE]
 グループのAdmin登録されているユーザのみ実行が可能
 + Request (application/json)
@@ -100,10 +100,10 @@
         + message: not authority (string) - グループを削除する権限が無い
 
 
-## 個別グループメンバーエンドポイント [/group/{groupname}/member]
+## 個別グループメンバーエンドポイント [/group/{groupid}/member]
 
 + Parameters
-    + groupname: 総務部(string) - 操作したいグループ名
+    + groupid: g0001(string) - 操作したいグループID
 
 ### グループメンバー取得 [GET]
 グループに所属しているメンバーの一覧を取得する。管理者ではなくとも実行可能
@@ -155,5 +155,3 @@
 + Response 401 (application/json)
     + Attributes
         + message: invalid token (string) - トークンの認証に失敗
-
-        
