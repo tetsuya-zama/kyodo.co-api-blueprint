@@ -120,37 +120,19 @@
     + Attributes
         + message: invalid token (string) - トークンの認証に失敗
 
-### グループメンバー追加 [POST]
-グループにメンバーを追加する。Admin権限がある場合のみ実行可能
-
-+ Request (application/json)
-    + Headers
-        Authorization : Bearer valid_access_token
-    + Attribute
-        + member: addmembers (array) - 追加したいユーザIDのリスト
-
-+ Response 200 (application/json)
-    + Attributes
-        + message: ok (string) - 追加完了
-
-+ Response 401 (application/json)
-    + Attributes
-        + message: invalid token (string) - トークンの認証に失敗
-
-
-### グループメンバー削除 [DELETE]
-グループからメンバーを削除する。Admin権限がある場合のみ実行可能。ただし、自身がAdminであり、かつ自身を削除することはできない。
+### グループメンバー変更 [PUT]
+グループメンバーを入れ替える。Admin権限がある場合のみ実行可能。ただし、自身がAdminであり、かつ自身を削除することはできない。
 他のAdminをメンバーから削除すると、自動的にAdminではなくなる
 
 + Request (application/json)
     + Headers
         Authorization : Bearer valid_access_token
     + Attribute
-        + member: addmembers (array) - 削除したいユーザIDのリスト
+        + member: newmembers (array) - 変更後メンバーリスト
 
 + Response 200 (application/json)
     + Attributes
-        + message: ok (string) - 追加完了
+        + message: ok (string) - 変更完了
 
 + Response 401 (application/json)
     + Attributes
