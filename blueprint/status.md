@@ -17,7 +17,7 @@
         + inBusiness: true (boolean) - 出社/退社(trueなら出社)
         + comment: 宝町 (string) - コメント
         + contact: 090ーXXXXーXXXX (string) - 連絡先
-        
+
 + Response 401 (application/json)
     + Attributes
         + message: invalid token (string) - トークンの認証に失敗
@@ -40,7 +40,7 @@
         + comment: 宝町 (string) - コメント
         + contact: 090ーXXXXーXXXX (string) - 連絡先
 
-        
+
 + Response 401 (application/json)
     + Attributes
         + message: invalid token (string) - トークンの認証に失敗
@@ -57,8 +57,8 @@
 + Response 200 (application/json)
     + Body
         [
-            {userid: "userid123", comment:"宝町", contact: "090ーXXXXーXXXX",inBusiness: true, lastUpdate: "2017-03-31 15:30:31", name:"田中　太郎" },
-            {userid: "userid456", comment:"YBP", contact: "080ーXXXXーXXXX",inBusiness: false, lastUpdate: "2017-03-31 15:30:31", name:"吉田　花子" }
+            {"userid": "userid123", "comment":"宝町", "contact": "090ーXXXXーXXXX","inBusiness": true, "lastUpdate": "2017-03-31 15:30:31", "name":"田中　太郎" },
+            {"userid": "userid456", "comment":"YBP", "contact": "080ーXXXXーXXXX","inBusiness": false, "lastUpdate": "2017-03-31 15:30:31", "name":"吉田　花子" }
         ]
 
 + Response 400 (application/json)
@@ -73,4 +73,3 @@
 + Response 401 (application/json)
     + Attributes
         + message: invalid token (string) - トークンの認証に失敗
-

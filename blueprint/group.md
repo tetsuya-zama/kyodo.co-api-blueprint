@@ -13,8 +13,8 @@
 + Response 200 (application/json)
     + Body
         [
-            {name: "groupname1", admin: { "userid1", "userid2" }},
-            {name: "groupname2", admin: { "userid3", }}
+            {"name": "groupname1", "admin": { "userid1", "userid2" }},
+            {"name": "groupname2", "admin": { "userid3", }}
         ]
 
 + Response 401 (application/json)
@@ -155,5 +155,3 @@
 + Response 401 (application/json)
     + Attributes
         + message: invalid token (string) - トークンの認証に失敗
-
-        
