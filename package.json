@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs": "aglio -i index.md -o docs/index.html",
     "docs-server": "aglio -i index.md -s -p 3030",
-    "mock": "drakov -f 'blueprint/*' -p 3000"
+    "mock": "drakov -f 'blueprint/*' -p 3000 --autoOptions --header Authorization --method PUT --method DELETE"
   },
   "author": "tetsuya.zama",
   "license": "ISC",
