@@ -39,16 +39,15 @@
 
         
 
-### ユーザー削除(未実装) [DELETE]
+### ユーザー削除 [DELETE]
 
 + Request (application/json)
     + Headers
         Authorization : Bearer valid_access_token
-    + Attributes
-        + userid: correct_userid (string) - ユーザーID
-        + password: correct_password (string) - パスワード
 
-+ Response 200
++ Response 200 (application/json)
+    + Attributes
+        + message: ok (string) - ユーザ削除完了
 
 ### ログインユーザーの名前参照 [GET]
 

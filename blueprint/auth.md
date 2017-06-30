@@ -20,3 +20,18 @@
     + password: invalid_password (string) - パスワード
 
 + Response 204
+
+
+
+### ログアウト [DELETE]
++ Request 認証済みトークン (application/json)
+    + Headers
+        Authorization : Bearer valid_access_token
+
++ Response 200 (application/json)
+    + Attributes
+        + message: ok (string) - ログアウト完了：Token無効化
+
++ Response 401 (application/json)
+    + Attributes
+        + message: invalid token (string) - トークンの認証に失敗
