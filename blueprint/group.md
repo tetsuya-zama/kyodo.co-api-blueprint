@@ -6,7 +6,7 @@
 ### 全てのグループを取得 [GET]
 認証されたユーザであれば登録された全てのグループを取得することが可能
 
-+ Request (application/json)
++ Request
     + Headers
         Authorization : Bearer valid_access_token
 
@@ -108,7 +108,7 @@
 ### グループメンバー取得 [GET]
 グループに所属しているメンバーの一覧を取得する。管理者ではなくとも実行可能
 
-+ Request (application/json)
++ Request
     + Headers
         Authorization : Bearer valid_access_token
 
