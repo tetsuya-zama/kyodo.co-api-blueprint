@@ -114,7 +114,7 @@
 
 + Response 200 (application/json)
     + Attributes
-        + members: userid (array) - グループ所属メンバーリスト
+        + members: userid123 (array) - グループ所属メンバーリスト
 
 + Response 401 (application/json)
     + Attributes
