@@ -13,8 +13,8 @@
 + Response 200 (application/json)
     + Body
         [
-            {"id": "g0001", "name": "groupname1", "admin": [ "userid1", "userid2" ]},
-            {"id": "g0002", "name": "groupname2", "admin": [ "userid3" ]}
+            {"id": "g0001", "groupname": "groupname1", "admin": [ "userid1", "userid2" ]},
+            {"id": "g0002", "groupname": "groupname2", "admin": [ "userid3" ]}
         ]
 
 + Response 401 (application/json)
