@@ -9,6 +9,8 @@
         + userid: test_user_id (string, required) - 登録するユーザーID
         + name: テストユーザー (string) - 登録する名前
         + password: test_user_pass (string) - 登録するパスワード
+        + secretQuestion: 母親の旧姓は？ (string, optional ) - 登録する秘密の質問
+        + secretAnswer: 佐藤 (string, optional) - 秘密の質問の答え
 
 + Response 200 (application/json)
     + Attributes
