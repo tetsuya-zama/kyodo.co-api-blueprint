@@ -13,7 +13,6 @@
 + Response 200 (application/json)
     + Body
         [
-<<<<<<< HEAD
             {"id": "g0001", 
                 "name": "groupname1",
                 "admin": [ "userid1", "userid2" ],
@@ -24,10 +23,6 @@
             "admin": [ "userid3" ],
             "member":[ "userid1", "userid3" ]            
             }
-=======
-            {"id": "g0001", "groupname": "groupname1", "admin": [ "userid1", "userid2" ]},
-            {"id": "g0002", "groupname": "groupname2", "admin": [ "userid3" ]}
->>>>>>> bac0b27e801290e904b14e26dc85af408960d3df
         ]
 
 + Response 401 (application/json)
