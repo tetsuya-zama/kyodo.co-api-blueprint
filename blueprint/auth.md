@@ -4,12 +4,14 @@
 
 ### IDとパスワードによる認証を行う [POST]
 
-+ Request 正しいID/Pass (application/json)
++ Request (application/json)
+事前にシステム登録されているユーザIDとパスワードを送信する
     + Attributes
-        + userid: correct_userid (string) - ユーザーID
-        + password: correct_password (string) - パスワード
+        + userid: correct_userid (string, required) - ユーザーID
+        + password: correct_password (string, required) - パスワード
 
 + Response 200 (application/json)
+ユーザIDとパスワードにより認証された。tokenは認証の都度再発行される。nameはユーザ登録時に利用者が決定したものでkey情報ではない
     + Attributes
         + token: valid_access_token (string) - アクセストークン
         + name: テストユーザー (string) - ユーザー名

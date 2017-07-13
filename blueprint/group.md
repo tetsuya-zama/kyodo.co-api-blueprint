@@ -6,15 +6,28 @@
 ### 全てのグループを取得 [GET]
 認証されたユーザであれば登録された全てのグループを取得することが可能
 
-+ Request (application/json)
++ Request
     + Headers
         Authorization : Bearer valid_access_token
 
 + Response 200 (application/json)
     + Body
         [
-            {"id": "g0001", "name": "groupname1", "admin": [ "userid1", "userid2" ]},
-            {"id": "g0002", "name": "groupname2", "admin": [ "userid3" ]}
+<<<<<<< HEAD
+            {"id": "g0001", 
+                "name": "groupname1",
+                "admin": [ "userid1", "userid2" ],
+                "member":[ "userid1", "userid2" , "userid3" ]
+            },
+            {"id":"g0002", 
+            "name": "groupname2", 
+            "admin": [ "userid3" ],
+            "member":[ "userid1", "userid3" ]            
+            }
+=======
+            {"id": "g0001", "groupname": "groupname1", "admin": [ "userid1", "userid2" ]},
+            {"id": "g0002", "groupname": "groupname2", "admin": [ "userid3" ]}
+>>>>>>> bac0b27e801290e904b14e26dc85af408960d3df
         ]
 
 + Response 401 (application/json)
@@ -108,13 +121,13 @@
 ### グループメンバー取得 [GET]
 グループに所属しているメンバーの一覧を取得する。管理者ではなくとも実行可能
 
-+ Request (application/json)
++ Request
     + Headers
         Authorization : Bearer valid_access_token
 
 + Response 200 (application/json)
     + Attributes
-        + members: userid (array) - グループ所属メンバーリスト
+        + members: userid123 (array) - グループ所属メンバーリスト
 
 + Response 401 (application/json)
     + Attributes
