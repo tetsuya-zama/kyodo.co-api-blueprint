@@ -81,6 +81,10 @@
     + Attributes
         + secretQuestion: "母親の旧姓は？" (string) - 設定している秘密の質問
 
++ Response 204 (application/json)
+    + Attributes
+        + message: no secretQuestion (string) - 設定している秘密がない
+
 + Response 404 (application/json)
     + Attributes
         + message: no useruser  (string) - そんなユーザはいないです
