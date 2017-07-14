@@ -97,6 +97,44 @@
 
 
 
+## ユーザ毎履歴取得エンドポイント [/user/{userId}/history]
+
++ Parameters
+    + userId: taro1234 (string) - 操作したいユーザID
+
+
+### ユーザー履歴取得 [GET]
+ユーザ登録履歴を取得する。
+
++ Request (application/json)
+    + Headers
+        Authorization : Bearer valid_access_token
+
++ Response 200 (application/json)
+    + Body
+        [
+            {"userid": "taro1234", 
+             "datetime" : 2017-07-12 22:55:01.623286,
+             "comment" : "123会議室に居ます",
+             "contact" : "0333333333",
+             "inBusiness" : true
+            },
+            {"userid": "taro1234", 
+             "datetime" : 2017-07-12 22:55:01.623286,
+             "comment" : "234会議室に居ます",
+             "contact" : "0333333333",
+             "inBusiness" : true
+            }
+        ]
+
+
++ Response 204 (application/json)
+    + Attributes
+        + message: no history (string) - 履歴無し
+
++ Response 404 (application/json)
+    + Attributes
+        + message: no useruser  (string) - そんなユーザはいないです
 
 
 ## 秘密の質問エンドポイント [/user/{userId}/secretquestion]
