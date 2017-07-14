@@ -23,6 +23,7 @@
         + message: user post is faild (string) - 登録処理に失敗（ユーザ名の重複など）
 
 ### パスワード/名前の変更 [PUT]
+このサービスはいずれ移行予定
 
 + Request (application/json)
     + Headers
@@ -45,6 +46,7 @@
         
 
 ### ユーザー削除 [DELETE]
+このサービスはいずれ移行予定
 
 + Request (application/json)
     + Headers
@@ -55,6 +57,7 @@
         + message: ok (string) - ユーザ削除完了
 
 ### ログインユーザーの名前参照 [GET]
+このサービスはいずれ移行予定
 
 + Request
     + Headers
@@ -96,7 +99,7 @@
 
 
 
-## 秘密の質問エンドポイント [/user/{userId}/secretqestion]
+## 秘密の質問エンドポイント [/user/{userId}/secretquestion]
 
 + Parameters
     + userId: taro1234 (string) - 操作したいユーザID
