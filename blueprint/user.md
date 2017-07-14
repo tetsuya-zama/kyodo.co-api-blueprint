@@ -11,6 +11,7 @@
         + password: test_user_pass (string) - 登録するパスワード
         + secretQuestion: 母親の旧姓は？ (string, optional ) - 登録する秘密の質問
         + secretAnswer: 佐藤 (string, optional) - 秘密の質問の答え
+        + contact: 0300000000 (string, optional) - デフォルト連絡先
 
 + Response 200 (application/json)
     + Attributes
@@ -29,11 +30,13 @@
     + Attributes
         + newPassword: test_user_new_pass (string) - 新しいパスワード
         + name: 新テストユーザー (string) - 新しい名前
+        + contact: 0300000000 (string,optional) - デフォルト連絡先
 
 + Response 200 (application/json)
     + Attributes
         + newPassword: test_user_new_pass (string) - 新しいパスワード
         + name: 新テストユーザー (string) - 新しい名前
+        + contact: 0300000000 (string) - デフォルト連絡先
 
 + Response 401 (application/json)
     + Attributes
@@ -64,6 +67,33 @@
 + Response 401 (application/json)
     + Attributes
         + message: invalid token (string) - トークンの認証に失敗
+
+
+
+## ユーザに関する操作エンドポイント [/user/{userId}]
+
++ Parameters
+    + userId: taro1234 (string) - 操作したいユーザID
+
+### ユーザ設定情報の取得 [GET]
+ユーザのプロファイルを取得する。
+
++ Request
+    + Headers
+        Authorization : Bearer valid_access_token
+
++ Response 200 (application/json)
+    + Attributes
+        + name: テストユーザー (string) - ログインユーザーの名前
+        + contact: 0300000000 (string) - デフォルト連絡先
+
++ Response 401 (application/json)
+    + Attributes
+        + message: invalid token (string) - トークンの認証に失敗
+
+
+
+
 
 
 ## 秘密の質問エンドポイント [/user/{userId}/secretqestion]
