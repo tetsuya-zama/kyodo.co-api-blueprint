@@ -66,6 +66,7 @@
 + Response 200 (application/json)
     + Attributes
         + name: テストユーザー (string) - ログインユーザーの名前
+        + contact: 033333333 (string) - デフォルト連絡先
 
 + Response 401 (application/json)
     + Attributes
